@@ -1,0 +1,18 @@
+# Blackbox — Python dependencies
+# Install with:  pip install -r requirements.txt
+# (Do this inside a virtual environment — see README.)
+
+# Config / secrets loading
+python-dotenv>=1.0
+
+# CockroachDB is PostgreSQL-compatible — we talk to it with psycopg 3.
+psycopg[binary]>=3.2
+
+# Agent framework (LangGraph gives us the checkpointer that stores agent
+# state in CockroachDB) and the AWS/Bedrock LangChain integration.
+langgraph>=0.2
+langchain>=0.3
+langchain-aws>=0.2
+
+# AWS SDK — Bedrock (models + embeddings), Lambda, S3.
+boto3>=1.34
